@@ -1,0 +1,16 @@
+-- You can add your own plugins here or in other files in this directory!
+--  I promise not to create any merge conflicts in this directory :)
+--
+-- See the kickstart.nvim README for more information
+return {
+  { import = 'gruvbox-material' },
+  { import = 'spec.autosession' },
+  { import = 'spec.harpoon' },
+  { import = 'spec.vim-tmux-navigator' },
+  { import = 'spec.nvim-java' },
+  { import = 'spec.ts-autotag' },
+  { import = 'spec.mason' },
+  { import = 'spec.nvim-treesitter' },
+  { import = 'spec.lspconfig' },
+  { import = 'spec.conform' },
+}
