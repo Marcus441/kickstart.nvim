@@ -1,35 +1,36 @@
 ---@diagnostic disable: different-requires
 return {
-  "stevearc/conform.nvim",
-  event = "BufWritePre",
+  'stevearc/conform.nvim',
+  event = 'BufWritePre',
   init = function()
-    vim.keymap.set("n", "<leader>fm", function()
-      require("conform").format { lsp_fallback = true }
-    end, { desc = "Format files" })
+    vim.keymap.set('n', '<leader>fm', function()
+      require('conform').format { lsp_fallback = true }
+    end, { desc = 'Format files' })
   end,
   opts = {
     formatters_by_ft = {
       -- clang should work by default
-      bash = { "shfmt" },
-      css = { "prettier" },
-      scss = { "prettier" },
-      fxml = { "xmlformatter" },
-      xml = { "xmlformatter" },
-      go = { "gofmt" },
-      html = { "prettier" },
-      java = { "google-java-format" },
-      javascript = { "prettier" },
-      javascriptreact = { "prettier" },
-      json = { "biome" },
-      markdown = { "deno_fmt" },
-      ocaml = { "ocamlformat" },
-      typescript = { "prettier" },
-      typescriptreact = { "prettier" },
-      vue = { "prettier" },
-      lua = { "stylua" },
-      toml = { "taplo" },
-      yaml = { "yamlfmt" },
-      zig = { "zigfmt" },
+      bash = { 'shfmt' },
+      cs = { 'csharpier' },
+      css = { 'prettier' },
+      scss = { 'prettier' },
+      fxml = { 'xmlformatter' },
+      xml = { 'xmlformatter' },
+      go = { 'gofmt' },
+      html = { 'prettier' },
+      java = { 'google-java-format' },
+      javascript = { 'prettier' },
+      javascriptreact = { 'prettier' },
+      json = { 'biome' },
+      markdown = { 'deno_fmt' },
+      ocaml = { 'ocamlformat' },
+      typescript = { 'prettier' },
+      typescriptreact = { 'prettier' },
+      vue = { 'prettier' },
+      lua = { 'stylua' },
+      toml = { 'taplo' },
+      yaml = { 'yamlfmt' },
+      zig = { 'zigfmt' },
     },
     format_on_save = function(bufnr)
       -- Disable with a global or buffer-local variable
@@ -40,7 +41,7 @@ return {
     end,
     formatters = {
       yamlfmt = {
-        args = { "-formatter", "retain_line_breaks_single=true" },
+        args = { '-formatter', 'retain_line_breaks_single=true' },
       },
     },
   },
