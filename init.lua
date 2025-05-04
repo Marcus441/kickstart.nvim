@@ -523,6 +523,15 @@ require('lazy').setup({
         eslint = {},
         html = {},
         lemminx = {},
+        nil_ls = {
+          settings = {
+            ["nil"] = {
+              formatting = {
+                command = { "nixpkgs-fmt" }, -- or "alejandra" if you're using that instead
+              }
+            }
+          }
+        },
         gopls = {},
         jsonls = {},
         jdtls = {},
@@ -634,6 +643,7 @@ require('lazy').setup({
         javascriptreact = { 'prettier' },
         json = { 'biome' },
         markdown = { 'deno_fmt' },
+        nix = { "nixpkgs_fmt" },
         ocaml = { 'ocamlformat' },
         typescript = { 'prettier' },
         typescriptreact = { 'prettier' },
